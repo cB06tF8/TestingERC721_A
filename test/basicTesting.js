@@ -32,39 +32,5 @@ describe("deploy and test TestMedallion", function () {
     expect(x).to.equal("0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266");
     x = await testMedallion.paused();
     expect(x).to.equal(false);
-
-    //console.log("paused: " + x);    
-  });
-
-});
-
-/*
-describe("Simple Test of TestMedallion", function () {
-  it("Successful deployment of TestMedallionAnyAddressMintA", async function () {
-    const TestMedallion = await ethers.getContractFactory("TestMedallionAnyAddressMintA");
-    const testMedallion = await TestMedallion.deploy();
-    await testMedallion.deployed();
-    const maxSupply = await testMedallion.maxSupply();
-    expect(maxSupply).to.equal(10);      
   });
 });
-*/
-
-/*
-describe("Greeter", function () {
-  it("Should return the new greeting once it's changed", async function () {
-    const Greeter = await ethers.getContractFactory("Greeter");
-    const greeter = await Greeter.deploy("Hello, world!");
-    await greeter.deployed();
-
-    expect(await greeter.greet()).to.equal("Hello, world!");
-
-    const setGreetingTx = await greeter.setGreeting("Hola, mundo!");
-
-    // wait until the transaction is mined
-    await setGreetingTx.wait();
-
-    expect(await greeter.greet()).to.equal("Hola, mundo!");
-  });
-});
-*/
